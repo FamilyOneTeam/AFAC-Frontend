@@ -1,9 +1,28 @@
+import AuthLayout from './common/layouts/auth-layout';
+import { Button } from './components/ui';
+
 function App() {
   return (
     <>
-      <h1 className='text-red-600 font-bold text-4xl'>Hola Mundo</h1>
+      <AuthLayout
+        image={
+          <img
+            className='h-[95%] rounded w-full object-cover'
+            src='/auth/welcome-screen.svg'
+            alt='bienvenido/a'
+          />
+        }
+        content={
+          <>
+            <h1 className='font-bold text-4xl'>
+              Bienvenido al Sistema de <br /> Gestión de Datos de <br /> AFAC
+            </h1>
+            <Button className='mt-2 text-lg font-light w-full md:w-3/4'>Continuar</Button>
+          </>
+        }
+      ></AuthLayout>
     </>
-  )
+  );
 }
 
 export default App
