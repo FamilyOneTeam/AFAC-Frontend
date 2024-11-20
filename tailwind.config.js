@@ -40,6 +40,48 @@ export default {
   				DEFAULT: 'hsl(var(--destructive))',
   				foreground: 'hsl(var(--destructive-foreground))'
   			},
+			green: {
+				DEFAULT: '#8DC342',
+			},
+			greenHover: {
+				DEFAULT: '#80B13C'
+			},
+			greenFocused: {
+				DEFAULT: '#4E6B24'
+			},
+			greenTextFocused: {
+				DEFAULT: '#DCECC4'
+			},
+			greenPressed: {
+				DEFAULT: '#3B521C'
+			},
+			grayText: {
+				DEFAULT: '#E8E8E8'
+			},
+			greenDisabled: {
+				DEFAULT: '#7D7D7D'
+			},
+			greenTextDisabled: {
+				DEFAULT: '#B8B8B8'
+			},
+			secondaryDisabled: {
+				DEFAULT: '#646464'
+			},
+			red: {
+				DEFAULT: '#BF1F3C'
+			},
+			redHover: {
+				DEFAULT: '#88162B'
+			},
+			redTextFoucsed: {
+				DEFAULT: '#691121'
+			},
+			redPressed: {
+				DEFAULT: '#500D19'
+			},
+			redDisabled: {
+				DEFAULT: '#E298A5'
+			},
   			border: 'hsl(var(--border))',
   			input: 'hsl(var(--input))',
   			ring: 'hsl(var(--ring))',
