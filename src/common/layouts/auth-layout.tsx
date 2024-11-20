@@ -2,7 +2,7 @@ import { AuthLayoutContext } from './interfaces';
 
 export default function AuthLayout({ image, content }: AuthLayoutContext) {
   return (
-    <main className='grid md:grid-cols-2 p-2 md:p-4'>
+    <main className='grid md:grid-cols-2 p-2 md:p-4 min-h-screen'>
       <section className='grid px-6 h-screen md:h-auto'>
         <div className='self-center grid gap-10 mt-6'>
           <img
