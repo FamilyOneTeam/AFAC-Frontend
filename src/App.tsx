@@ -17,7 +17,7 @@ function App() {
             <h1 className='font-bold text-4xl'>
               Bienvenido al Sistema de <br /> Gestión de Datos de <br /> AFAC
             </h1>
-            <Button className='mt-2 text-lg font-light w-full md:w-3/4'>Continuar</Button>
+            <Button variant={'primary'} className='mt-8 text-lg w-full md:w-3/4'>Continuar</Button>
           </>
         }
       ></AuthLayout>
