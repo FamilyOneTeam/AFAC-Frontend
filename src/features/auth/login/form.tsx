@@ -72,7 +72,7 @@ const LoginForm = () => {
               <FormLabel>Contraseña</FormLabel>
               <FormControl>
                 <Input
-                  placeholder='Minimo 8 caracteres'
+                  placeholder='minimo 8 caracteres'
                   type={showPassword ? 'text' : 'password'}
                   className='mt-1 pl-7 focus-visible:ring-0'
                   {...field}
