@@ -22,7 +22,7 @@ function App() {
               variant={"primary"}
               className="mt-8 text-lg w-full md:w-3/4"
             >
-              <Link to={'/auth/login'} className='w-full'>Continuar</Link>
+              <Link to={'/auth/ingresar'} className='w-full'>Continuar</Link>
             </Button>
           </>
         }
