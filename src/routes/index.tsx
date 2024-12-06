@@ -1,4 +1,5 @@
 import App from '@/App';
+import UpdateCredentialsAdmin from '@/features/auth/admin/page';
 import Login from '@/features/auth/login/page';
 import { createBrowserRouter, RouterProvider} from 'react-router-dom';
 
@@ -8,8 +9,12 @@ const router = createBrowserRouter([
     element: <App />,
   },
   {
-    path: "/auth/login",
+    path: "/auth/ingresar",
     element: <Login />,
+  },
+  {
+    path: "/auth/admin/personalizar",
+    element: <UpdateCredentialsAdmin />,
   },
   {
     path: "*",
