@@ -1,7 +1,7 @@
 import AuthLayout from "@/common/layouts/auth-layout";
 import LoginForm from "./form";
 
-function App() {
+function Login() {
   return (
     <>
       <AuthLayout
@@ -23,4 +23,4 @@ function App() {
   );
 }
 
-export default App;
+export default Login;
