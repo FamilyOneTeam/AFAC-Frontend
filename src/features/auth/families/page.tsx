@@ -1,5 +1,5 @@
 import AuthLayout from "@/common/layouts/auth-layout";
-import UpdateCredencialsFamiliesForm from "./form";
+import UpdateCredencialsFamiliesForm from "./forms/UpdateCredencialsForm";
 
 function UpdateCredentialsFamilies() {
   return (
