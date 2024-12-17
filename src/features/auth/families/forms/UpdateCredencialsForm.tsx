@@ -14,8 +14,8 @@ import {
   Button,
   Checkbox,
 } from "@/components/ui";
-import { updateCredencialsFamiliesSchemaType } from "./types";
-import { updateCredencialsFamiliesSchema } from "./schemas/index";
+import { updateCredencialsFamiliesSchemaType } from "../types";
+import { updateCredencialsFamiliesSchema } from "../schemas/index";
 import { Link } from "react-router-dom";
 
 const UpdateCredencialsFamiliesForm = () => {
