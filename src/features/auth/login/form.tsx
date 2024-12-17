@@ -16,6 +16,7 @@ import {
 } from '@/components/ui';
 import { loginSchemaType } from './types';
 import { loginSchema } from './schemas/index';
+import { Link } from 'react-router-dom';
 
 const LoginForm = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -32,18 +33,18 @@ const LoginForm = () => {
   };
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className='pt-8'>
+      <form onSubmit={form.handleSubmit(onSubmit)} className="pt-8">
         <FormField
           control={form.control}
-          name='correo'
+          name="correo"
           render={({ field }) => (
-            <FormItem className='pb-10 relative'>
+            <FormItem className="pb-10 relative">
               <FormLabel>Correo</FormLabel>
-              <PiEnvelopeSimpleFill className='absolute top-[36px] text-gray ml-2 text-lg' />
+              <PiEnvelopeSimpleFill className="absolute top-[36px] text-gray ml-2 text-lg" />
               <FormControl>
                 <Input
-                  placeholder='e.g john@gmail.com'
-                  className='mt-1 pl-7 focus-visible:ring-0'
+                  placeholder="e.g john@gmail.com"
+                  className="mt-1 pl-7 focus-visible:ring-0"
                   {...field}
                 />
               </FormControl>
@@ -53,28 +54,34 @@ const LoginForm = () => {
         />
         <FormField
           control={form.control}
-          name='contrasena'
+          name="contrasena"
           render={({ field }) => (
-            <FormItem className='pb-10 relative'>
-              <IoIosLock className='absolute top-[42px] text-gray ml-2 text-lg' />
+            <FormItem className="pb-10 relative">
+              <Link
+                to={"/auth/recuperar-contrasena"}
+                className="text-center absolute bottom-3 right-0 text-sm text-gray-500 opacity-70 underline"
+              >
+                ¿Necesitas recuperar la contraseña?
+              </Link>
+              <IoIosLock className="absolute top-[36px] text-gray ml-2 text-lg" />
               <IoIosEyeOff
                 onClick={() => setShowPassword(!showPassword)}
                 className={`${
-                  !showPassword ? 'block' : 'hidden'
+                  !showPassword ? "block" : "hidden"
                 } absolute text-gray right-0 top-[36.6px] mr-2 hover:cursor-pointer`}
               />
               <IoIosEye
                 onClick={() => setShowPassword(!showPassword)}
                 className={`${
-                  showPassword ? 'block' : 'hidden'
+                  showPassword ? "block" : "hidden"
                 } absolute text-gray right-0 top-[36.6px] mr-2 hover:cursor-pointer`}
               />
               <FormLabel>Contraseña</FormLabel>
               <FormControl>
                 <Input
-                  placeholder='minimo 8 caracteres'
-                  type={showPassword ? 'text' : 'password'}
-                  className='mt-1 pl-7 focus-visible:ring-0'
+                  placeholder="minimo 8 caracteres"
+                  type={showPassword ? "text" : "password"}
+                  className="mt-1 pl-7 focus-visible:ring-0"
                   {...field}
                 />
               </FormControl>
@@ -82,9 +89,8 @@ const LoginForm = () => {
             </FormItem>
           )}
         />
-
-        <div className='w-full pt-3'>
-          <Button variant={'primary'} className='w-full hover:bg-purpleHover'>
+        <div className="w-full pt-4 grid gap-2">
+          <Button variant={"primary"} className="w-full hover:bg-purpleHover">
             Inciar sesión
           </Button>
         </div>
