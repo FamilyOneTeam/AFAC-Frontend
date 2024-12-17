@@ -127,7 +127,7 @@ const UpdateCredencialsFamiliesForm = () => {
               >
                 Acepto{" "}
                 <Link
-                  to={"/auth/familia/terminos"}
+                  to={"/auth/familias/terminos"}
                   className="underline text-[#00c14d]"
                 >
                   términos y condiciones
@@ -148,7 +148,7 @@ const UpdateCredencialsFamiliesForm = () => {
               >
                 Leí y acepto el{" "}
                 <Link
-                  to={"/auth/familia/contrato-confidencialidad"}
+                  to={"/auth/familias/contrato-confidencialidad"}
                   className="underline text-[#00c14d]"
                 >
                   contrato de confidencialidad
