@@ -17,7 +17,7 @@ const buttonVariants = cva(
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
         primary:
-          "rounded-lg py-2 px-4 font-normal bg-greenNormal focus:bg-greenNormal focus:border focus:border-black active:bg-white active:text-grayDarker active:border active:border-greenDarker disabled:bg-greenLight disabled:text-gray-900 focus:text-black text-black hover:bg-greenDarker hover:text-white",
+          "rounded-lg  px-4 font-normal bg-greenNormal focus:bg-greenNormal focus:border focus:border-black active:bg-white active:text-grayDarker active:border active:border-greenDarker disabled:bg-greenLight disabled:text-gray-900 focus:text-black text-black hover:bg-greenDarker hover:text-white",
         secondary:
           "rounded-lg py-2 px-4 font-normal bg-white border border-greenDarker text-greenDarker hover:bg-greenLight focus:bg-white focus:text-greenDark focus:border-greenDark active:bg-greenNormal active:text-greenDarker active:border-greenDarker disabled:text-white disabled:border-0 disabled:bg-greenLightActive",
         error:
