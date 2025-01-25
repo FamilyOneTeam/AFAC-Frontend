@@ -1,9 +1,11 @@
+import WelcomeScreen from "./features/welcome/page";
+import AuthLayout from "./layouts/auth.layout";
 
 function App() {
   return (
-    <>
-      <h1>Hola mundo!</h1>
-    </>
+    <AuthLayout>
+      <WelcomeScreen />
+    </AuthLayout>
   );
 }
 
