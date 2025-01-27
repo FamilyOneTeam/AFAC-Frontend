@@ -160,6 +160,66 @@ export default {
         redDarker: {
           DEFAULT: "#44a10",
         },
+        textLight: {
+          DEFAULT: "#e8e8e8",
+        },
+        textLightHover: {
+          DEFAULT: "#dddddd",
+        },
+        textLightActive: {
+          DEFAULT: "#b8b8b8",
+        },
+        textNormal: {
+          DEFAULT: "#1a1a1a",
+        },
+        textNormalHover: {
+          DEFAULT: "#171717",
+        },
+        textNormalActive: {
+          DEFAULT: "#151515",
+        },
+        textDark: {
+          DEFAULT: "#141414",
+        },
+        textDarkHover: {
+          DEFAULT: "#101010",
+        },
+        textDarkActive: {
+          DEFAULT: "#0c0c0c",
+        },
+        textDarker: {
+          DEFAULT: "#090909",
+        },
+        BgLight: {
+          DEFAULT: "#ffffff",
+        },
+        BgLightHover: {
+          DEFAULT: "#ffffff",
+        },
+        BgLightActive: {
+          DEFAULT: "#ffffff",
+        },
+        BgNormal: {
+          DEFAULT: "#e6e6e6",
+        },
+        BgNormalHover: {
+          DEFAULT: "#e6e6e6",
+        },
+        BgNormalActive: {
+          DEFAULT: "#cccccc",
+        },
+        BgDark: {
+          DEFAULT: "#bfbfbf",
+        },
+        BgDarkHover: {
+          DEFAULT: "#999999",
+        },
+        BgDarkActive: {
+          DEFAULT: "#737373",
+        },
+        BgDarker: {
+          DEFAULT: "#595959",
+        },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
