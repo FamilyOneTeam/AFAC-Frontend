@@ -3,7 +3,7 @@ import { IAuthLayout } from "./interfaces";
 export default function AuthLayout({ children }: IAuthLayout) {
   return (
     <main className="relative">
-      <div className=" max-w-5xl mx-auto min-h-screen grid md:grid-cols-2 p-2 md:p-4">
+      <div className=" max-w-5xl mx-auto min-h-screen grid gap-6 md:grid-cols-2 p-2 md:p-4">
         {children}
       </div>
       <div className="absolute bottom-0 h-5 w-full flex">
