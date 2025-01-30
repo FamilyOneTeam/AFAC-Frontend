@@ -101,7 +101,7 @@ const LoginForm = () => {
                 />
               </FormControl>
               <FormMessage />
-              <Link to={"/auth/forgot-password"} className=" text-sm text-textNormal text-opacity-70 absolute right-0 underline">
+              <Link to={"/auth/forgot-password"} className=" text-sm text-textNormal hover:text-greenNormal text-opacity-70 absolute right-0 underline">
                 ¿Necesitas recuperar la contraseña?
               </Link>
             </FormItem>

@@ -2,6 +2,7 @@ import App from '@/App';
 import UpdateCredencials from "@/features/auth/admin/page";
 import UpdateCredencialsFamily from '@/features/auth/family/page';
 import Login from '@/features/auth/login/page';
+import ForgotPassword from '@/features/auth/forgot-password/page';
 import { createBrowserRouter, RouterProvider} from 'react-router-dom';
 
 const router = createBrowserRouter([
@@ -12,6 +13,10 @@ const router = createBrowserRouter([
   {
     path: "/auth/login",
     element: <Login />,
+  },
+  {
+    path: "/auth/forgot-password",
+    element: <ForgotPassword />,
   },
   {
     path: "/auth/update-credencials",
