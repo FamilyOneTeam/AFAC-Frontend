@@ -16,6 +16,7 @@ import {
 } from "@/components/ui";
 import { updateCredencialsFamilySchemaType } from "./types/index";
 import { updateCredencialsFamilySchema } from "./schemas/index";
+import { Link } from "react-router-dom";
 
 const UpdateCredencialsFamilyForm = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -114,9 +115,12 @@ const UpdateCredencialsFamilyForm = () => {
                 </FormControl>
                 <FormLabel className="!mt-0">
                   Aceptar{" "}
-                  <span className="text-greenDarker underline">
+                  <Link
+                    to={"/auth/family/terms-conditions"}
+                    className="text-greenDarker underline"
+                  >
                     términos y condiciones
-                  </span>
+                  </Link>
                 </FormLabel>
               </div>
               <FormMessage />
@@ -147,7 +151,7 @@ const UpdateCredencialsFamilyForm = () => {
           )}
         />
         <div className="w-full pt-3">
-          <Button variant={"primary"} className="w-full md:w-2/4">
+          <Button variant={"primary"} className="w-full md:w-52">
             Actualizar contraseña
           </Button>
         </div>
