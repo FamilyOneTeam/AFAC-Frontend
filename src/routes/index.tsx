@@ -1,5 +1,6 @@
 import App from '@/App';
 import UpdateCredencials from "@/features/auth/admin/page";
+import UpdateCredencialsFamily from '@/features/auth/family/page';
 import Login from '@/features/auth/login/page';
 import { createBrowserRouter, RouterProvider} from 'react-router-dom';
 
@@ -15,6 +16,10 @@ const router = createBrowserRouter([
   {
     path: "/auth/update-credencials",
     element: <UpdateCredencials />,
+  },
+  {
+    path: "/auth/family/update-credencials",
+    element: <UpdateCredencialsFamily />,
   },
   {
     path: "*",
