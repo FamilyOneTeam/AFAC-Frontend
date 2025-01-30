@@ -64,3 +64,9 @@
     @apply bg-background text-foreground;
   }
 }
+
+.terms-container {
+  max-height: calc(100vh - 400px);
+  overflow-y: auto;
+  padding-right: 10px;
+}

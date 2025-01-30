@@ -60,10 +60,12 @@ const ForgotPasswordForm = () => {
         />
 
         <div className="w-full flex gap-2 pt-3">
-          <Button type="button" variant={"secondary"} className="w-2/4">
-            <Link className="w-full" to={"/auth/login"}>Cancelar</Link>
+          <Button type="button" variant={"secondary"} className=" w-32">
+            <Link className="w-full" to={"/auth/login"}>
+              Cancelar
+            </Link>
           </Button>
-          <Button variant={"primary"} className="w-full">
+          <Button variant={"primary"} className="w-full md:w-52">
             Recuperar Contraseña
           </Button>
         </div>

@@ -33,7 +33,9 @@ const UpdateCredencialsForm = () => {
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="pt-8">
-        <h1 className="pb-8 text-3xl md:text-3xl lg:text-4xl">Ingresa tus credenciales </h1>
+        <h1 className="pb-8 text-3xl md:text-3xl lg:text-4xl">
+          Ingresa tus credenciales{" "}
+        </h1>
         <FormField
           control={form.control}
           name="contrasena"
@@ -96,7 +98,7 @@ const UpdateCredencialsForm = () => {
         />
 
         <div className="w-full pt-3">
-          <Button variant={"primary"} className="w-full md:w-2/4">
+          <Button variant={"primary"} className="w-full md:w-52">
             Actualizar contraseña
           </Button>
         </div>

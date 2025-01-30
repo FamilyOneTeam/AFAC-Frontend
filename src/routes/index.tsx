@@ -4,6 +4,7 @@ import UpdateCredencialsFamily from '@/features/auth/family/page';
 import Login from '@/features/auth/login/page';
 import ForgotPassword from '@/features/auth/forgot-password/page';
 import { createBrowserRouter, RouterProvider} from 'react-router-dom';
+import TermsAndConditions from '@/features/auth/family/contracts/page';
 
 const router = createBrowserRouter([
   {
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
   {
     path: "/auth/family/update-credencials",
     element: <UpdateCredencialsFamily />,
+  },
+  {
+    path: "/auth/family/terms-conditions",
+    element: <TermsAndConditions />,
   },
   {
     path: "*",

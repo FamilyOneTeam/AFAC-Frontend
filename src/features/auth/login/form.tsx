@@ -101,7 +101,10 @@ const LoginForm = () => {
                 />
               </FormControl>
               <FormMessage />
-              <Link to={"/auth/forgot-password"} className=" text-sm text-textNormal hover:text-greenNormal text-opacity-70 absolute right-0 underline">
+              <Link
+                to={"/auth/forgot-password"}
+                className=" text-sm text-textNormal hover:text-greenNormal text-opacity-70 absolute right-0 underline"
+              >
                 ¿Necesitas recuperar la contraseña?
               </Link>
             </FormItem>
@@ -109,7 +112,7 @@ const LoginForm = () => {
         />
 
         <div className="w-full pt-3">
-          <Button variant={"primary"} className="w-full md:w-1/3">
+          <Button variant={"primary"} className="w-full md:w-52">
             Inciar sesión
           </Button>
         </div>
