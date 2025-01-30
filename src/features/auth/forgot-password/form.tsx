@@ -12,6 +12,7 @@ import {
 } from "@/components/ui";
 import { forgotPasswordSchemaType } from "./types";
 import { forgotPasswordSchema } from "./schemas/index";
+import { Link } from "react-router-dom";
 
 
 const ForgotPasswordForm = () => {
@@ -59,8 +60,8 @@ const ForgotPasswordForm = () => {
         />
 
         <div className="w-full flex gap-2 pt-3">
-          <Button variant={"secondary"} className="w-2/4">
-            Cancelar
+          <Button type="button" variant={"secondary"} className="w-2/4">
+            <Link className="w-full" to={"/auth/login"}>Cancelar</Link>
           </Button>
           <Button variant={"primary"} className="w-full">
             Recuperar Contraseña
