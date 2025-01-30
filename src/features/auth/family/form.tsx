@@ -12,28 +12,34 @@ import {
   FormControl,
   FormMessage,
   Button,
+  Checkbox,
 } from "@/components/ui";
-import { updateCredencialsSchemaType } from "./types/index";
-import { updateCredencialsSchema } from "./schemas/index";
+import { updateCredencialsFamilySchemaType } from "./types/index";
+import { updateCredencialsFamilySchema } from "./schemas/index";
 
-const UpdateCredencialsForm = () => {
+const UpdateCredencialsFamilyForm = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
-  const form = useForm<updateCredencialsSchemaType>({
-    resolver: zodResolver(updateCredencialsSchema),
+  const form = useForm<updateCredencialsFamilySchemaType>({
+    resolver: zodResolver(updateCredencialsFamilySchema),
     defaultValues: {
       contrasena: "",
       repiteContrasena: "",
+      terminos: false,
+      contrato: false
     },
   });
 
-  const onSubmit = async (values: updateCredencialsSchemaType) => {
+  const onSubmit = async (values: updateCredencialsFamilySchemaType) => {
     console.log(values);
   };
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="pt-8">
-        <h1 className="pb-8 text-3xl md:text-3xl lg:text-4xl">Ingresa tus credenciales </h1>
+        <h1 className="pb-8 text-2xl md:text-3xl">
+          Por tu seguridad, <br />{" "}
+          <span className="text-lg md:text-xl">cambia tu contraseña</span>{" "}
+        </h1>
         <FormField
           control={form.control}
           name="contrasena"
@@ -94,7 +100,52 @@ const UpdateCredencialsForm = () => {
             </FormItem>
           )}
         />
-
+        <FormField
+          control={form.control}
+          name="terminos"
+          render={({ field }) => (
+            <FormItem className="pb-8">
+              <div className="flex items-center space-x-2">
+                <FormControl>
+                  <Checkbox
+                    checked={field.value}
+                    onCheckedChange={field.onChange}
+                  />
+                </FormControl>
+                <FormLabel className="!mt-0">
+                  Aceptar{" "}
+                  <span className="text-greenDarker underline">
+                    términos y condiciones
+                  </span>
+                </FormLabel>
+              </div>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <FormField
+          control={form.control}
+          name="contrato"
+          render={({ field }) => (
+            <FormItem className="pb-8">
+              <div className="flex items-center space-x-2">
+                <FormControl>
+                  <Checkbox
+                    checked={field.value}
+                    onCheckedChange={field.onChange}
+                  />
+                </FormControl>
+                <FormLabel className="!mt-0">
+                  Aceptar{" "}
+                  <span className="text-greenDarker underline">
+                    acuerdo de confidencialidad AFAC
+                  </span>
+                </FormLabel>
+              </div>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
         <div className="w-full pt-3">
           <Button variant={"primary"} className="w-full md:w-2/4">
             Actualizar contraseña
@@ -105,4 +156,4 @@ const UpdateCredencialsForm = () => {
   );
 };
 
-export default UpdateCredencialsForm;
+export default UpdateCredencialsFamilyForm;
