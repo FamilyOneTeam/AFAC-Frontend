@@ -1,5 +1,4 @@
 import { z } from 'zod';
- import { updateCredencialsSchema } from '../schemas/index';
+import { updateCredencialsSchema } from '../schemas/index';
 
- export type updateCredencialsSchemaType = z.infer<typeof updateCredencialsSchema>;
- 
+export type updateCredencialsSchemaType = z.infer<typeof updateCredencialsSchema>;
