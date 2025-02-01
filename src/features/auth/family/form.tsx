@@ -141,9 +141,12 @@ const UpdateCredencialsFamilyForm = () => {
                 </FormControl>
                 <FormLabel className="!mt-0">
                   Aceptar{" "}
-                  <span className="text-greenDarker underline">
+                  <Link
+                    to={"/auth/family/privacy-conditions"}
+                    className="text-greenDarker underline"
+                  >
                     acuerdo de confidencialidad AFAC
-                  </span>
+                  </Link>
                 </FormLabel>
               </div>
               <FormMessage />
