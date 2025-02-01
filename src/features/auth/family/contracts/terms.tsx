@@ -2,7 +2,7 @@ export default function TermsContract() {
     return (
       <div className="terms-container ">
         <h1 className=" font-normal text-2xl md:text-3xl mb-5">
-          Términos y condiciones de FamilyOne.
+          Términos y condiciones de FamilyOne
         </h1>
         <div className="grid gap-4">
           <p className="font-bold">Última actualización: 10/10/2024</p>

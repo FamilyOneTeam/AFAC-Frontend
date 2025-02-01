@@ -4,7 +4,8 @@ import UpdateCredencialsFamily from '@/features/auth/family/page';
 import Login from '@/features/auth/login/page';
 import ForgotPassword from '@/features/auth/forgot-password/page';
 import { createBrowserRouter, RouterProvider} from 'react-router-dom';
-import TermsAndConditions from '@/features/auth/family/contracts/page';
+import TermsAndConditions from '@/features/auth/family/contracts/terms-page';
+import PrivacyContractPage from '@/features/auth/family/contracts/privacy-page';
 
 const router = createBrowserRouter([
   {
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
   {
     path: "/auth/family/terms-conditions",
     element: <TermsAndConditions />,
+  },
+  {
+    path: "/auth/family/privacy-conditions",
+    element: <PrivacyContractPage />,
   },
   {
     path: "*",
