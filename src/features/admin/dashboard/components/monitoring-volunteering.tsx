@@ -12,7 +12,7 @@ export default function MonitoringVolunteering() {
         <p>Seguimiento y Voluntariado</p>
       </div>
       <div className=" h-[2px] mt-2 w-full bg-redNormal mb-2"></div>
-      <Link to={""} className="flex items-center gap-1 p-2">
+      <Link to={"/follow-up"} className="flex items-center gap-1 p-2">
         <img src="/dashboard/home/seguimiento.svg" alt="" className="w-8" />
         <span className=" text-lg font-bold">Seguimiento de Familias</span>
       </Link>
