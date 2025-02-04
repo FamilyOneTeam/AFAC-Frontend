@@ -6,6 +6,7 @@ import ForgotPassword from '@/features/auth/forgot-password/page';
 import { createBrowserRouter, RouterProvider} from 'react-router-dom';
 import TermsAndConditions from '@/features/auth/family/contracts/terms-page';
 import PrivacyContractPage from '@/features/auth/family/contracts/privacy-page';
+import Dashboard from '@/features/admin/dashboard/page';
 
 const router = createBrowserRouter([
   {
@@ -35,6 +36,10 @@ const router = createBrowserRouter([
   {
     path: "/auth/family/privacy-conditions",
     element: <PrivacyContractPage />,
+  },
+  {
+    path: "/home",
+    element: <Dashboard />,
   },
   {
     path: "*",
