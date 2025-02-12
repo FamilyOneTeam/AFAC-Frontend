@@ -36,7 +36,10 @@ const UpdateCredencialsFamilyForm = () => {
   };
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="pt-8">
+      <form
+        onSubmit={form.handleSubmit(onSubmit)}
+        className="w-full md:max-w-sm"
+      >
         <h1 className="pb-8 text-2xl md:text-3xl">
           Por tu seguridad, <br />{" "}
           <span className="text-lg md:text-xl">cambia tu contraseña</span>{" "}
@@ -50,13 +53,13 @@ const UpdateCredencialsFamilyForm = () => {
                 onClick={() => setShowPassword(!showPassword)}
                 className={`${
                   !showPassword ? "block" : "hidden"
-                } absolute text-gray right-0 top-[36.6px] mr-2 hover:cursor-pointer`}
+                } absolute text-gray right-0 top-[43.6px] mr-2 hover:cursor-pointer`}
               />
               <IoIosEye
                 onClick={() => setShowPassword(!showPassword)}
                 className={`${
                   showPassword ? "block" : "hidden"
-                } absolute text-gray right-0 top-[36.6px] mr-2 hover:cursor-pointer`}
+                } absolute text-gray right-0 top-[35.4px] mr-2 hover:cursor-pointer`}
               />
               <FormLabel>Nueva Contraseña</FormLabel>
               <FormControl>
@@ -80,13 +83,13 @@ const UpdateCredencialsFamilyForm = () => {
                 onClick={() => setShowConfirmPassword(!showConfirmPassword)}
                 className={`${
                   !showConfirmPassword ? "block" : "hidden"
-                } absolute text-gray right-0 top-[36.6px] mr-2 hover:cursor-pointer`}
+                } absolute text-gray right-0 top-[43.6px] mr-2 hover:cursor-pointer`}
               />
               <IoIosEye
                 onClick={() => setShowConfirmPassword(!showConfirmPassword)}
                 className={`${
                   showConfirmPassword ? "block" : "hidden"
-                } absolute text-gray right-0 top-[36.6px] mr-2 hover:cursor-pointer`}
+                } absolute text-gray right-0 top-[35.4px] mr-2 hover:cursor-pointer`}
               />
               <FormLabel>Repetir Contraseña</FormLabel>
               <FormControl>

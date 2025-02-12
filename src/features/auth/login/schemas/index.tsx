@@ -5,12 +5,14 @@ export const loginSchema = z.object({
   contrasena: z
     .string()
     .min(8, {
-      message: "Una contraseña tiene que tener un minimo de 8 caracteres",
+      message:
+        "Mínimo 8 caracteres, con mayúsculas, minúsculas, números y símbolos",
     })
     .max(25, {
-      message: "Una contraseña no puede tener que tener más que 25 caracteres",
+      message: "Una contraseña no puede tener más que 25 caracteres",
     })
-    .regex(/^[a-zA-Z\d_-]{8,}$/, {
-      message: "Password can only contain letters, digits, _, and -",
+    .regex(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[-_@#$%^&*]).{8,}$/, {
+      message:
+        "La contraseña debe tener al menos una mayúscula, una minúscula, un número y un carácter especial (-_@#$%^&*)",
     }),
 });

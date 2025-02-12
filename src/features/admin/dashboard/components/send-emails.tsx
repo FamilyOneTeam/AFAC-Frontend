@@ -1,4 +1,3 @@
-import Help from "@/components/shared/help";
 
 export default function SendEmails() {
   return (
@@ -7,7 +6,6 @@ export default function SendEmails() {
         <img src="/dashboard/home/enviar.svg" alt="enviar" className="w-6" />
         <p className="text-sm font-bold">Enviar comunicado</p>
       </div>
-      <Help />
     </section>
   );
 }

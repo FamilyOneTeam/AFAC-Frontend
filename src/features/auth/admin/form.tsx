@@ -15,8 +15,10 @@ import {
 } from "@/components/ui";
 import { updateCredencialsSchemaType } from "./types/index";
 import { updateCredencialsSchema } from "./schemas/index";
+import { useNavigate } from "react-router";
 
 const UpdateCredencialsForm = () => {
+  const navigate = useNavigate();
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const form = useForm<updateCredencialsSchemaType>({
@@ -29,10 +31,14 @@ const UpdateCredencialsForm = () => {
 
   const onSubmit = async (values: updateCredencialsSchemaType) => {
     console.log(values);
+    navigate("/home");
   };
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="pt-8">
+      <form
+        onSubmit={form.handleSubmit(onSubmit)}
+        className="w-full md:max-w-sm"
+      >
         <h1 className="pb-8 text-3xl md:text-3xl lg:text-4xl">
           Ingresa tus credenciales{" "}
         </h1>
@@ -45,13 +51,13 @@ const UpdateCredencialsForm = () => {
                 onClick={() => setShowPassword(!showPassword)}
                 className={`${
                   !showPassword ? "block" : "hidden"
-                } absolute text-gray right-0 top-[36.6px] mr-2 hover:cursor-pointer`}
+                } absolute text-gray right-0 top-[43.6px] mr-2 hover:cursor-pointer`}
               />
               <IoIosEye
                 onClick={() => setShowPassword(!showPassword)}
                 className={`${
                   showPassword ? "block" : "hidden"
-                } absolute text-gray right-0 top-[36.6px] mr-2 hover:cursor-pointer`}
+                } absolute text-gray right-0 top-[35.4px] mr-2 hover:cursor-pointer`}
               />
               <FormLabel>Nueva Contraseña</FormLabel>
               <FormControl>
@@ -75,13 +81,13 @@ const UpdateCredencialsForm = () => {
                 onClick={() => setShowConfirmPassword(!showConfirmPassword)}
                 className={`${
                   !showConfirmPassword ? "block" : "hidden"
-                } absolute text-gray right-0 top-[36.6px] mr-2 hover:cursor-pointer`}
+                } absolute text-gray right-0 top-[43.6px] mr-2 hover:cursor-pointer`}
               />
               <IoIosEye
                 onClick={() => setShowConfirmPassword(!showConfirmPassword)}
                 className={`${
                   showConfirmPassword ? "block" : "hidden"
-                } absolute text-gray right-0 top-[36.6px] mr-2 hover:cursor-pointer`}
+                } absolute text-gray right-0 top-[35.4px] mr-2 hover:cursor-pointer`}
               />
               <FormLabel>Repetir Contraseña</FormLabel>
               <FormControl>

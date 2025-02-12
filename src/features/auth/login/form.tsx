@@ -14,9 +14,10 @@ import {
 } from "@/components/ui";
 import { loginSchemaType } from "./types";
 import { loginSchema } from "./schemas/index";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const LoginForm = () => {
+  const navigate = useNavigate();
   const [showPassword, setShowPassword] = useState(false);
   const form = useForm<loginSchemaType>({
     resolver: zodResolver(loginSchema),
@@ -31,24 +32,14 @@ const LoginForm = () => {
   });
   const onSubmit = async (values: loginSchemaType) => {
     console.log(values);
-    if (
-      values.correo !== "test@example.com" ||
-      values.contrasena !== "password"
-    ) {
-      form.setError("correo", {
-        type: "manual",
-        message: "Invalid email or password",
-      });
-      form.setError("contrasena", {
-        type: "manual",
-        message: "Invalid email or password",
-      });
-      return;
-    }
+    navigate("/auth/update-credencials");
   };
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="pt-8">
+      <form onSubmit={form.handleSubmit(onSubmit)} className="w-full md:max-w-sm">
+        <h1 className="font-normal text-2xl md:text-4xl pb-8 md:pb-10">
+          Ingresa tus credenciales{" "}
+        </h1>
         <FormField
           control={form.control}
           name="correo"
