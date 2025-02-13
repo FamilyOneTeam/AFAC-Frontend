@@ -22,7 +22,7 @@ export default function MonitoringVolunteering() {
           Familias que solicitan mentorías
         </span>
       </Link>
-      <Link to={""} className="flex items-center gap-1 p-2">
+      <Link to={"/volunteers"} className="flex items-center gap-1 p-2">
         <img src="/dashboard/home/voluntarios.svg" alt="" className="w-8" />
         <span className=" text-lg font-bold">Gestión de Voluntarios</span>
       </Link>
