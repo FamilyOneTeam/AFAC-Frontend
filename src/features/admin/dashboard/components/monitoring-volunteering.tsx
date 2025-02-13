@@ -16,7 +16,7 @@ export default function MonitoringVolunteering() {
         <img src="/dashboard/home/seguimiento.svg" alt="" className="w-8" />
         <span className=" text-lg font-bold">Seguimiento de Familias</span>
       </Link>
-      <Link to={""} className="flex items-center gap-1 p-2">
+      <Link to={"/mentorship-requests"} className="flex items-center gap-1 p-2">
         <img src="/dashboard/home/mentorias.svg" alt="" className="w-8" />
         <span className=" text-lg font-bold">
           Familias que solicitan mentorías
