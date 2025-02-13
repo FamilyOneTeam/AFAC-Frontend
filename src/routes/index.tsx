@@ -9,6 +9,7 @@ import PrivacyContractPage from '@/features/auth/family/contracts/privacy-page';
 import Dashboard from '@/features/admin/dashboard/page';
 import FollowUp from '@/features/admin/follow-up/page';
 import Volunteers from '@/features/admin/volunteers/page';
+import MentorshipRequests from '@/features/admin/mentorships/page';
 
 const router = createBrowserRouter([
   {
@@ -50,6 +51,10 @@ const router = createBrowserRouter([
   {
     path: "/volunteers",
     element: <Volunteers />,
+  },
+  {
+    path: "/mentorship-requests",
+    element: <MentorshipRequests />,
   },
   {
     path: "*",
