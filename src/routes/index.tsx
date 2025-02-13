@@ -8,6 +8,7 @@ import TermsAndConditions from '@/features/auth/family/contracts/terms-page';
 import PrivacyContractPage from '@/features/auth/family/contracts/privacy-page';
 import Dashboard from '@/features/admin/dashboard/page';
 import FollowUp from '@/features/admin/follow-up/page';
+import Volunteers from '@/features/admin/volunteers/page';
 
 const router = createBrowserRouter([
   {
@@ -45,6 +46,10 @@ const router = createBrowserRouter([
   {
     path: "/follow-up",
     element: <FollowUp />,
+  },
+  {
+    path: "/volunteers",
+    element: <Volunteers />,
   },
   {
     path: "*",
