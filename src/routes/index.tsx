@@ -10,7 +10,7 @@ import Dashboard from '@/features/admin/dashboard/page';
 import FollowUp from '@/features/admin/follow-up/page';
 import Volunteers from '@/features/admin/volunteers/page';
 import MentorshipRequests from '@/features/admin/mentorships/page';
-import FamiliesList from '@/features/admin/families/pages';
+import FamiliesList from '@/features/admin/families/page';
 
 const router = createBrowserRouter([
   {
