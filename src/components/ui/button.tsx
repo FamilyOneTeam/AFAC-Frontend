@@ -11,7 +11,7 @@ const buttonVariants = cva(
       variant: {
         default: "bg-primary text-primary-foreground hover:bg-primary/90",
         destructive:
-          "py-2 px-4 bg-red text-grayText hover:bg-redHover focus:bg-white focus:border-2 focus:border-redHover focus:text-redTextFoucsed active:bg-redPressed active:border-0 active:text-grayText disabled:bg-redDisabled disabled:text-secondaryDisabled",
+          "py-2 px-4 bg-whote hover:bg-redLight text-redNormal border border-redNormal hover:bg-redHover focus:bg-white focus:text-white focus:bg-redNormal active:text-white active:bg-redNormal",
         outline:
           "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
         ghost: "hover:bg-accent hover:text-accent-foreground",
@@ -22,8 +22,7 @@ const buttonVariants = cva(
           "rounded-lg py-2 px-4 font-normal bg-white border border-greenDarker text-greenDarker hover:bg-greenLight focus:bg-white focus:text-greenDark focus:border-greenDark active:bg-greenNormal active:text-greenDarker active:border-greenDarker disabled:text-white disabled:border-0 disabled:bg-greenLightActive",
         error:
           "rounded-lg py-2 px-4 font-normal bg-redNormal text-gray-200 hover:bg-redDark focus:bg-white focus:text-redNormal focus:border focus:border-redNormal active:bg-redDarkActive active:border-0 active:text-gray-200",
-        tabs:
-          "py-2 px-4 font-normal bg-white text-greenDarker hover:bg-greenLight focus:text-greenDark active:bg-greenNormal active:text-greenDarker",
+        tabs: "py-2 px-4 font-normal bg-white text-greenDarker hover:bg-greenLight focus:text-greenDark active:bg-greenNormal active:text-greenDarker",
       },
       size: {
         default: "h-11 px-4 py-6",
