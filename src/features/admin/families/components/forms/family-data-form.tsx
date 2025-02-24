@@ -23,7 +23,7 @@ export default function FamilyDataForm({
       <h1 className="font-semibold text-sm pb-2">
         Datos de la Familia de Acogimiento
       </h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-x-3 md:gap-x-4 gap-y-2">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-x-3 md:gap-x-4 gap-y-4">
         <FormField
           control={form.control}
           name="fecha_ingreso_afac"
@@ -78,7 +78,7 @@ export default function FamilyDataForm({
             </FormItem>
           )}
         />
-        <br />
+        <br className="hidden md:block"/>
         <FormField
           control={form.control}
           name="duracion_evaluacion"
@@ -151,26 +151,29 @@ export default function FamilyDataForm({
             </FormItem>
           )}
         />
-        <br className="" />
-        <p className="font-bold">Hijos Biológicos</p>
-        <FormField
-          control={form.control}
-          name="hijos"
-          render={({ field }) => (
-            <FormItem className="relative md:pt-3">
-              <FormLabel>Número</FormLabel>
-              <FormControl>
-                <Input
-                  disabled={!isEditing}
-                  defaultValue={field.value}
-                  className="focus-visible:ring-0"
-                  {...field}
-                />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
+
+        <div className="pt-6">
+          <p className="font-bold">Hijos Biológicos</p>
+
+          <FormField
+            control={form.control}
+            name="hijos"
+            render={({ field }) => (
+              <FormItem className="relative md:pt-3">
+                <FormLabel>Número</FormLabel>
+                <FormControl>
+                  <Input
+                    disabled={!isEditing}
+                    defaultValue={field.value}
+                    className="focus-visible:ring-0"
+                    {...field}
+                  />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+        </div>
       </div>
     </>
   );

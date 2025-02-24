@@ -4,4 +4,7 @@ export * from './form';
 export * from './checkbox';
 export * from './tabs';
 export * from './dropdown-menu';
-export * from "./radio-group";
+export * from './radio-group';
+export * from './dialog';
+export * from './label';
+export * from './select';
