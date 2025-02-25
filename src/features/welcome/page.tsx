@@ -5,7 +5,7 @@ export default function WelcomeScreen() {
       <>
         <section className="grid items-center">
           <div className="relative flex flex-col gap-14 md:gap-16">
-            <Link to={'/'}>
+            <Link to={"/"}>
               <img
                 src="/common/logo-AFAC.svg"
                 alt="AFAC"
@@ -20,7 +20,7 @@ export default function WelcomeScreen() {
               to={"/auth/login"}
               className="text-center w-full md:w-52 rounded-lg  px-4 py-3 font-normal bg-greenNormal focus:bg-greenNormal focus:border focus:border-black active:bg-white active:text-grayDarker active:border active:border-greenDarker disabled:bg-greenLight disabled:text-gray-900 focus:text-black text-black hover:bg-greenDarker hover:text-white"
             >
-              Empzar
+              Empezar
             </Link>
           </div>
         </section>
