@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useForm, useFormState } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { IoIosEyeOff, IoIosEye } from "react-icons/io";
@@ -15,28 +15,56 @@ import {
 import { loginSchemaType } from "./types";
 import { loginSchema } from "./schemas/index";
 import { Link, useNavigate } from "react-router-dom";
+import useAuthStore from "@/store";
+import { useMutation } from "@tanstack/react-query";
+import { loginApi } from "./actions";
+import { toast } from "react-toastify";
 
 const LoginForm = () => {
+  const user = useAuthStore((state) => state.user);
+  const setUser = useAuthStore((state) => state.setUser);
   const navigate = useNavigate();
   const [showPassword, setShowPassword] = useState(false);
   const form = useForm<loginSchemaType>({
     resolver: zodResolver(loginSchema),
     defaultValues: {
       correo: "",
-      contrasena: "",
+      contrasenaHash: "",
     },
     mode: "onChange",
   });
-  const { isSubmitted, errors } = useFormState({
+  const { errors } = useFormState({
     control: form.control,
   });
+  useEffect(() => {
+    if (user && user.usuario.tipoUsuario === "ADMIN") {
+      navigate("/home");
+    }
+  }, [user, navigate]);
+  const mutation = useMutation({
+    mutationFn: loginApi,
+    onSuccess: (data) => {
+      if (data.token) {
+        setUser(data);
+        toast.success("Inicio de sesión exitoso");
+        navigate("/home");
+      } else {
+        toast.error(data.error);
+      }
+    },
+    onError: () => {
+      toast.error("Ha ocurrido un error");
+    },
+  });
   const onSubmit = async (values: loginSchemaType) => {
-    console.log(values);
-    navigate("/auth/update-credencials");
+    mutation.mutate(values);
   };
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="w-full md:max-w-sm">
+      <form
+        onSubmit={form.handleSubmit(onSubmit)}
+        className="w-full md:max-w-sm"
+      >
         <h1 className="font-normal text-2xl md:text-4xl pb-8 md:pb-10">
           Ingresa tus credenciales{" "}
         </h1>
@@ -50,7 +78,7 @@ const LoginForm = () => {
                 <Input
                   placeholder="e.g john@gmail.com"
                   className={`focus-visible:ring-0 ${
-                    isSubmitted || errors.correo
+                    errors.correo
                       ? "border-red-500 bg-white"
                       : ""
                   }`}
@@ -63,7 +91,7 @@ const LoginForm = () => {
         />
         <FormField
           control={form.control}
-          name="contrasena"
+          name="contrasenaHash"
           render={({ field }) => (
             <FormItem className="pb-10 relative">
               <IoIosEyeOff
@@ -84,7 +112,7 @@ const LoginForm = () => {
                   placeholder="minimo 8 caracteres"
                   type={showPassword ? "text" : "password"}
                   className={`focus-visible:ring-0 ${
-                    isSubmitted || errors.contrasena
+                    errors.contrasenaHash
                       ? "border-red-500 bg-white"
                       : ""
                   }`}
