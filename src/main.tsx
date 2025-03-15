@@ -4,10 +4,13 @@ import './index.css'
 import Router from './routes/index.tsx'
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import ReactQueryProvider from './utils/react-query.provider.tsx';
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <Router />
-    <ToastContainer />
+    <ReactQueryProvider>
+      <Router />
+      <ToastContainer />
+    </ReactQueryProvider>
   </StrictMode>
 );
