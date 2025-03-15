@@ -2,7 +2,7 @@ import { z } from "zod";
 
 export const loginSchema = z.object({
   correo: z.string().email({ message: "Introduce un correo valido" }),
-  contrasena: z
+  contrasenaHash: z
     .string()
     .min(8, {
       message:
