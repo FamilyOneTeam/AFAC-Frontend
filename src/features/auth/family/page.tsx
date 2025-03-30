@@ -18,7 +18,7 @@ export default function UpdateCredencialsFamily() {
         </div>
       </section>
       <section className="items-center hidden md:grid">
-        <img src="/auth/reset-admin-img.svg" alt="" />
+        <img src="/auth/reset-family-img.svg" alt="" />
       </section>
     </AuthLayout>
   );
