@@ -1,4 +1,4 @@
-export default function PrivacyContractFamily() {
+export default function PrivacyContract() {
   return (
     <div className="terms-container">
       <h1 className=" font-normal text-2xl md:text-3xl mb-5">

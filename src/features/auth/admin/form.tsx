@@ -12,10 +12,12 @@ import {
   FormControl,
   FormMessage,
   Button,
+  Checkbox,
 } from "@/components/ui";
 import { updateCredencialsSchemaType } from "./types/index";
 import { updateCredencialsSchema } from "./schemas/index";
 import { useNavigate } from "react-router";
+import { Link } from "react-router-dom";
 
 const UpdateCredencialsForm = () => {
   const navigate = useNavigate();
@@ -26,6 +28,8 @@ const UpdateCredencialsForm = () => {
     defaultValues: {
       contrasena: "",
       repiteContrasena: "",
+      terminos: false,
+      contrato: false,
     },
   });
 
@@ -59,7 +63,7 @@ const UpdateCredencialsForm = () => {
                   showPassword ? "block" : "hidden"
                 } absolute text-gray right-0 top-[35.4px] mr-2 hover:cursor-pointer`}
               />
-              <FormLabel>Nueva Contraseña</FormLabel>
+              <FormLabel className="text-black">Nueva Contraseña</FormLabel>
               <FormControl>
                 <Input
                   placeholder="minimo 8 caracteres"
@@ -89,15 +93,67 @@ const UpdateCredencialsForm = () => {
                   showConfirmPassword ? "block" : "hidden"
                 } absolute text-gray right-0 top-[35.4px] mr-2 hover:cursor-pointer`}
               />
-              <FormLabel>Repetir Contraseña</FormLabel>
+              <FormLabel className="text-black">Repetir Contraseña</FormLabel>
               <FormControl>
                 <Input
                   placeholder="minimo 8 caracteres"
                   type={showConfirmPassword ? "text" : "password"}
-                  className="focus-visible:ring-0"
+                  className={`focus-visible:ring-0 ${form.formState.errors.repiteContrasena ? 'border-redNormal bg-white' : ''}`}
                   {...field}
                 />
               </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <FormField
+          control={form.control}
+          name="terminos"
+          render={({ field }) => (
+            <FormItem className="pb-8">
+              <div className="flex items-center space-x-2">
+                <FormControl>
+                  <Checkbox
+                    checked={field.value}
+                    onCheckedChange={field.onChange}
+                  />
+                </FormControl>
+                <FormLabel className="!mt-0 text-black">
+                  Aceptar{" "}
+                  <Link
+                    to={"/auth/terms-conditions"}
+                    className="text-greenDarker underline"
+                  >
+                    términos y condiciones
+                  </Link>
+                </FormLabel>
+              </div>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <FormField
+          control={form.control}
+          name="contrato"
+          render={({ field }) => (
+            <FormItem className="pb-8">
+              <div className="flex items-center space-x-2">
+                <FormControl>
+                  <Checkbox
+                    checked={field.value}
+                    onCheckedChange={field.onChange}
+                  />
+                </FormControl>
+                <FormLabel className="!mt-0 text-black">
+                  Aceptar{" "}
+                  <Link
+                    to={"/auth/family/privacy-conditions"}
+                    className="text-greenDarker underline"
+                  >
+                    acuerdo de confidencialidad AFAC
+                  </Link>
+                </FormLabel>
+              </div>
               <FormMessage />
             </FormItem>
           )}

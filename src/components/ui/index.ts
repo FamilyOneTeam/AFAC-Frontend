@@ -8,3 +8,6 @@ export * from './radio-group';
 export * from './dialog';
 export * from './label';
 export * from './select';
+export * from './popover';
+export * from './calendar';
+export * from './textarea';

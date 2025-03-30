@@ -15,6 +15,16 @@ export const updateCredencialsSchema = z
           'La contraseña debe tener al menos una mayúscula, una minúscula, un número y un carácter especial (-_@#$%^&*)',
       }),
     repiteContrasena: z.string(),
+    terminos: z
+      .boolean()
+      .refine((val) => val === true, {
+        message: 'Debes aceptar los términos y condiciones',
+      }),
+    contrato: z
+      .boolean()
+      .refine((val) => val === true, {
+        message: 'Debes aceptar el acuerdo de confidencialidad',
+      }),
   })
   .superRefine((val, ctx) => {
     if (val.contrasena !== val.repiteContrasena) {
