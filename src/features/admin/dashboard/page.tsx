@@ -1,5 +1,5 @@
 import HomeLayout from "@/layouts/home.layout";
-import WelcomeUser from "./components/welcome-user";
+import WelcomeUser from "../../shared/welcome-user";
 import Overview from "./components/overview";
 import Actions from "./components/actions";
 import SendEmails from "./components/send-emails";
