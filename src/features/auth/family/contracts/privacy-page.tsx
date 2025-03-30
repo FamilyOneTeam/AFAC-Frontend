@@ -1,8 +1,8 @@
 import AuthLayout from "@/layouts/auth.layout";
-import PrivacyContract from "./privacy";
+import PrivacyContractFamily from "./privacy";
 import { Link } from "react-router-dom";
 
-export default function PrivacyContractPage() {
+export default function PrivacyContractPageFamily() {
   return (
     <AuthLayout>
       <section className="grid items-center">
@@ -12,7 +12,7 @@ export default function PrivacyContractPage() {
             alt="AFAC"
             className="max-w-24 mb-10"
           />
-          <PrivacyContract />
+          <PrivacyContractFamily />
           <Link
             to={"/auth/family/update-credencials"}
             className="text-center mt-6 w-full md:w-36  rounded-lg  px-4 py-3 font-normal bg-greenNormal focus:bg-greenNormal focus:border focus:border-black active:bg-white active:text-grayDarker active:border active:border-greenDarker disabled:bg-greenLight disabled:text-gray-900 focus:text-black text-black hover:bg-greenDarker hover:text-white"
@@ -22,7 +22,7 @@ export default function PrivacyContractPage() {
         </div>
       </section>
       <section className="items-center hidden md:grid">
-        <img src="/auth/reset-admin-img.svg" alt="" />
+        <img src="/auth/reset-family-img.svg" alt="" />
       </section>
     </AuthLayout>
   );
